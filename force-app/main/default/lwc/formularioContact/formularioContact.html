@@ -1,3 +1,54 @@
 <template>
-    
+    <lightning-card title="Formulario de Contacto">
+
+        <div class="slds-p-around_medium">
+
+            <lightning-input
+                label="Nombre"
+                value={nombre}
+                onchange={handleChange}
+                onblur={handleBlur}
+                data-field="nombre">
+            </lightning-input>
+
+            <template if:true={errors.nombre}>
+                <div class="error">{errors.nombre}</div>
+            </template>
+
+            <lightning-input
+                label="Email"
+                value={email}
+                onchange={handleChange}
+                onblur={handleBlur}
+                data-field="email">
+            </lightning-input>
+
+            <template if:true={errors.email}>
+                <div class="error">{errors.email}</div>
+            </template>
+
+            <lightning-textarea
+                label="Mensaje"
+                value={mensaje}
+                onchange={handleChange}
+                onblur={handleBlur}
+                data-field="mensaje">
+            </lightning-textarea>
+
+            <template if:true={errors.mensaje}>
+                <div class="error">{errors.mensaje}</div>
+            </template>
+
+            <br/>
+
+            <lightning-button
+                label="Enviar"
+                variant="brand"
+                onclick={handleSubmit}
+                disabled={isInvalid}>
+            </lightning-button>
+
+        </div>
+
+    </lightning-card>
 </template>
