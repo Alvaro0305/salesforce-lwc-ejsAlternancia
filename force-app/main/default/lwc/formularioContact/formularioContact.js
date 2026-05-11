@@ -65,20 +65,20 @@ export default class FormularioContact extends LightningElement {
     }
 
     handleSubmit() {
-    if (this.isInvalid) return;
+        if (this.isInvalid) return;
 
-    this.dispatchEvent(
-        new ShowToastEvent({
-            title: 'Éxito',
-            message: 'Formulario enviado correctamente',
-            variant: 'success'
-        })
-    );
+        this.dispatchEvent(
+            new ShowToastEvent({
+                title: 'Éxito',
+                message: 'Formulario enviado correctamente',
+                variant: 'success'
+            })
+        );
 
-    // Reset del formulario
-    this.nombre = '';
-    this.email = '';
-    this.mensaje = '';
-    this.errors = {};
-}
+        // Reset del formulario
+        this.nombre = '';
+        this.email = '';
+        this.mensaje = '';
+        this.errors = {};
+    }
 }
