@@ -1,5 +1,5 @@
 import { LightningElement } from 'lwc';
-import { ShowToastEvent } from 'lightning/platformShowToastEvent';
+import { ShowToastEvent } from 'liggithtning/platformShowToastEvent';
 
 export default class FormularioContact extends LightningElement {
     
