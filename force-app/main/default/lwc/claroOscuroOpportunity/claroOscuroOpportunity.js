@@ -23,7 +23,6 @@ export default class ClaroOscuroOpportunity extends LightningElement {
         return this.modoOscuro ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
     }
 
-    // Clase de la pastilla de estado
     get claseEstado() {
         return this.oportunidad.estado === 'Closed Won'
             ? 'valor estado estado-won'

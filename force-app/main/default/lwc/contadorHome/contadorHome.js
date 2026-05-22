@@ -8,7 +8,6 @@ export default class ContadorHome extends LightningElement {
 
     intervalo = null;
 
-    // Formatea los segundos a HH:MM:SS
     get tiempoFormateado() {
         const horas = Math.floor(this.segundos / 3600);
         const minutos = Math.floor((this.segundos % 3600) / 60);
