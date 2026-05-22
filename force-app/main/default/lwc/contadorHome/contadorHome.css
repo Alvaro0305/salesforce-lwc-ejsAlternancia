@@ -1,0 +1,34 @@
+.contador-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    gap: 24px;
+}
+
+.titulo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.display-tiempo {
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 24px 48px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.tiempo {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #00ff88;
+    letter-spacing: 8px;
+    font-family: monospace;
+}
+
+.botones {
+    display: flex;
+    gap: 12px;
+}
