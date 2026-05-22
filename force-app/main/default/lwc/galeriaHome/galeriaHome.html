@@ -1,3 +1,32 @@
 <template>
-    
+
+    <div class="gallery-container">
+
+        <div class="main-image-container">
+            <img
+                src={selectedImage}
+                alt="Imagen principal"
+                class="main-image"
+            />
+        </div>
+
+        <div class="thumbnails">
+
+            <template for:each={imageList} for:item="image">
+
+                <img
+                    key={image.id}
+                    src={image.url}
+                    alt="Miniatura"
+                    data-url={image.url}
+                    class={image.cssClass}
+                    onclick={handleImageClick}
+                />
+
+            </template>
+
+        </div>
+
+    </div>
+
 </template>
