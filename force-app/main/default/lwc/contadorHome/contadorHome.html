@@ -1,3 +1,31 @@
 <template>
-    
+    <div class="contador-container">
+        <h2 class="titulo">Contador de Tiempo</h2>
+
+        <div class="display-tiempo">
+            <span class="tiempo">{tiempoFormateado}</span>
+        </div>
+
+        <div class="botones">
+            <lightning-button
+                label="Iniciar"
+                variant="brand"
+                onclick={iniciar}
+                disabled={corriendo}>
+            </lightning-button>
+
+            <lightning-button
+                label="Pausar"
+                variant="neutral"
+                onclick={pausar}
+                disabled={pausado}>
+            </lightning-button>
+
+            <lightning-button
+                label="Reiniciar"
+                variant="destructive"
+                onclick={reiniciar}>
+            </lightning-button>
+        </div>
+    </div>
 </template>
