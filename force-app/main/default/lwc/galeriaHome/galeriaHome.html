@@ -1,32 +1,18 @@
 <template>
-
-    <div class="gallery-container">
-
-        <div class="main-image-container">
-            <img
-                src={selectedImage}
-                alt="Imagen principal"
-                class="main-image"
-            />
-        </div>
-
-        <div class="thumbnails">
-
-            <template for:each={imageList} for:item="image">
-
-                <img
-                    key={image.id}
-                    src={image.url}
-                    alt="Miniatura"
-                    data-url={image.url}
-                    class={image.cssClass}
-                    onclick={handleImageClick}
-                />
-
-            </template>
-
-        </div>
-
+    <div class="main-image-container">
+        <img src={imagenPrincipal} alt="Imagen principal" class="main-image" />
     </div>
 
+    <div class="thumbnails-container">
+        <template for:each={imagenesConClase} for:item="imagen">
+            <img
+                key={imagen.id}
+                src={imagen.url}
+                alt={imagen.alt}
+                data-id={imagen.id}
+                onclick={seleccionarImagen}
+                class={imagen.claseMinuatura}
+            />
+        </template>
+    </div>
 </template>
