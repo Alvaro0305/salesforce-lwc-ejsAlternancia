@@ -1,3 +1,36 @@
 <template>
-    
+    <div class={claseContenedor}>
+
+        <div class="header">
+            <h2 class="titulo">Detalle de Oportunidad</h2>
+            <lightning-button
+                label={etiquetaBoton}
+                variant="brand"
+                onclick={alternarTema}>
+            </lightning-button>
+        </div>
+
+        <div class="ficha">
+            <div class="campo">
+                <span class="etiqueta">Nombre</span>
+                <span class="valor">{oportunidad.nombre}</span>
+            </div>
+
+            <div class="campo">
+                <span class="etiqueta">Estado</span>
+                <span class={claseEstado}>{oportunidad.estado}</span>
+            </div>
+
+            <div class="campo">
+                <span class="etiqueta">Importe</span>
+                <span class="valor">{oportunidad.importe}</span>
+            </div>
+
+            <div class="campo">
+                <span class="etiqueta">Fecha de cierre</span>
+                <span class="valor">{oportunidad.fechaCierre}</span>
+            </div>
+        </div>
+
+    </div>
 </template>

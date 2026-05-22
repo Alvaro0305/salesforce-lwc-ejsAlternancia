@@ -1,0 +1,91 @@
+/* Variables por tema usando clases en el contenedor */
+.contenedor {
+    padding: 28px;
+    border-radius: 12px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Modo claro */
+.modo-claro {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* Modo oscuro */
+.modo-oscuro {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    border: 1px solid #333355;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.titulo {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.ficha {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid;
+}
+
+/* El color del borde inferior cambia con el tema */
+.modo-claro .campo {
+    border-color: #eeeeee;
+}
+
+.modo-oscuro .campo {
+    border-color: #2a2a4a;
+}
+
+.etiqueta {
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    opacity: 0.6;
+}
+
+.valor {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Pastilla de estado */
+.estado {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    width: fit-content;
+}
+
+.estado-won {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.estado-other {
+    background-color: #fff3cd;
+    color: #856404;
+}
